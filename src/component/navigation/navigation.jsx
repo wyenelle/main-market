@@ -20,7 +20,7 @@ const Navigation = () => {
 
   return (
     <main className='h-screen flex flex-col  border-4 '>
-        <nav className='border-2 border-blue-500 navigation  p-5 flex justify-between items-center'>
+        <nav className=' border-blue-500 navigation  p-5 flex justify-between items-center'>
             <h2>  marketPlace</h2>
             {
                 loggedInUser ? <span onClick={sign_out_handler}> sign out </span> : <Link to='/signin'> sign in</Link>

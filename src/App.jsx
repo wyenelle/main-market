@@ -5,7 +5,10 @@ import Navigation from './component/navigation/navigation'
 import Shop from './routes/shop/shop'
 import SignIn from './routes/signin/signin'
 import SignUp from './routes/signup/signup'
-
+import Cart from './routes/cart/cart'
+import WishList from './routes/wishlist/wishlist'
+import Message from '../message/message'
+import Profile from './routes/profile/profile'
 
 function App() {
 
@@ -15,6 +18,10 @@ function App() {
         <Route index  element={<Shop />} />
         <Route path='signin'  element={<SignIn />} />
         <Route path='signup'  element={<SignUp />} />
+        <Route path='cart'  element={<Cart />} />
+        <Route path='wishlist'  element={<WishList  />} />
+        <Route path='message'  element={<Message />} />
+        <Route path='profile'  element={<Profile />} />
       </Route>
     </Routes>
   )

@@ -11,19 +11,19 @@ const Footer = () => {
   return (
     <footer className="h-20 border-4 flex justify-around items-center">
         <Link to='/' title='home'>
-            <RiHome2Line size={40}/>  
+            <RiHome2Line size={25}/>  
         </Link>
         <Link to='cart' title='cart'>
-            < BsCartDash size={40}/>
+            < BsCartDash size={25}/>
         </Link>
         <Link to='wishlist' title='wishlist'>
-            <MdOutlinePlaylistAdd size={40}/>
+            <MdOutlinePlaylistAdd size={25}/>
         </Link>
         <Link to='message' title='message'>
-            <TiMessages size={40} />
+            <TiMessages size={25} />
         </Link>
         <Link to='profile' title='profile'>
-            <FaRegUser size={40} />
+            <FaRegUser size={25} />
         </Link>
     </footer>
   )

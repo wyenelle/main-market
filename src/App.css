@@ -1,0 +1,7 @@
+/* Fonts for all headings and important text */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&family=Rowdies:wght@700&display=swap');
+
+
+h1,h2{
+    font-family: 'Kanit', sans-serif;
+}

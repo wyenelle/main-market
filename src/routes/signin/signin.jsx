@@ -4,6 +4,8 @@ import { sign_in_user,sign_in_with_google_popup, sign_in_with_google_redirect, c
 
 import { Market_Context } from "../../context/context"
 
+import GoogleButton from 'react-google-button'
+
 const defaultState = {
     email: '', password: ''
 }
@@ -75,20 +77,26 @@ const SignIn = () => {
 
 
   return (
-    <form action="" onSubmit={handleSubmit}>
-        <div className="form-input">
-            <label htmlFor="email"> Email</label>
-            <input type="emsil" name="email" value={email} onChange={handleChange}   />
-        </div>
-        <div className="form-input">
-            <label htmlFor=""> Password </label>
-            <input type="password" name="password" value={password} onChange={handleChange}   />
-        </div>
-        <div className="buttons-container">
-            <button> submit </button>
-            <button type='button' onClick={google_sign_in} > Sign In With Google</button>
-        </div>
-    </form>
+    <div className='h-screen  px-5 flex flex-col justify-center items-center'>
+        <form action="" onSubmit={handleSubmit} className='h-5/6  w-full'>
+            <div className="my-9 flex flex-col gap-2">
+                <label htmlFor="email" className='font-semibold  text-xl'> Email</label>
+                <input type="emsil" name="email" className="form-input" value={email} onChange={handleChange}   />
+            </div>
+            <div className="my-9 flex flex-col gap-2">
+                <label htmlFor="" className='font-semibold  text-xl'> Password </label>
+                <input type="password" name="password" className="form-input" value={password} onChange={handleChange}   />
+            </div>
+            <div className="flex flex-col justify-center gap-4">
+                <button className="btn"> submit </button>
+                <h3 className="font-light text-2xl text-center">OR</h3>
+                <div className=" flex justify-center">
+                    <GoogleButton onClick={google_sign_in}  />
+                </div>
+                {/* <button type='button' onClick={google_sign_in} > Sign In With Google</button> */}
+            </div>
+        </form>
+    </div>
   )
 }
 

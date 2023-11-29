@@ -3,6 +3,9 @@ import { useState } from 'react'
 import { useContext } from 'react'
 import { Market_Context } from '../../context/context'
 
+import './signup.css'
+
+
 const defaultFormFields = {
     displayName: '',
     email: '',
@@ -11,6 +14,7 @@ const defaultFormFields = {
 }
 
 import { create_user_from_email_and_password,create_user_from_auth } from '../../utils/firebase'
+import { MdImportExport } from 'react-icons/md'
  
 const SignUp = () => {
   const [formField,setFormField] = useState(defaultFormFields)
@@ -54,26 +58,31 @@ const SignUp = () => {
 
 
   return (
-    <div>
-        <form onSubmit={handleSubmit}>
-          <div className='formfield-container '>
-          <label htmlFor="displayName"> Display NAme</label>
-            <input type="text" id='displayName' name='displayName' value={displayName} onChange={handleChange}/>
-          </div>
-          <div className='formfield-container '>
-          <label htmlFor="email">Email</label>
-            <input type="text" id='email' name='email' value={email} onChange={handleChange}/>
-          </div>
-          <div className='formfield-container '>
-          <label htmlFor="password" > Password</label>
-            <input type="text" id='password' name='password' value={password} onChange={handleChange}/>
-          </div>
-          <div className='formfield-container '>
-          <label htmlFor="confirmPassword"> Confirm Password</label>
-            <input type="text" id='confirmPassword' name='confirmPassword' value={confirmPassword} onChange={handleChange}/>
+    <div className='sign-up-container h-screen  px-5 flex flex-col justify-center items-center'>
+        <form onSubmit={handleSubmit} className='h-5/6  w-full'>
+        <h1 className='header-text mb-6'>Welcome back</h1>
+          <div className=' my-9 flex flex-col gap-2'>
+          <label htmlFor="displayName" className='font-semibold  text-xl'> Display Name</label>
+            <input type="text" id='displayName' name='displayName' className='form-input' value={displayName} onChange={handleChange}/>
           </div>
 
-          <button className='bg-yellow-400' type='submit'> submit</button>
+          <div className=' my-9 flex flex-col gap-2 '>
+          <label htmlFor="email" className='font-semibold  text-xl'>Email</label>
+            <input type="text" id='email' name='email' className='form-input' value={email} onChange={handleChange}/>
+          </div>
+
+          <div className=' my-9 flex flex-col gap-2 '>
+          <label htmlFor="password" className='font-semibold  text-xl'> Password</label>
+            <input type="text" id='password' name='password' className='form-input' value={password} onChange={handleChange}/>
+          </div>
+
+          <div className=' my-9 flex flex-col gap-2'>
+          <label htmlFor="confirmPassword" className='font-semibold  text-xl'> Confirm Password</label>
+            <input type="text" id='confirmPassword' name='confirmPassword' className='form-input' value={confirmPassword} onChange={handleChange}/>
+          </div>
+
+
+          <button className='btn ' type='submit'> Submit</button>
         </form>
     </div>
   )
