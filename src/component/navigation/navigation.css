@@ -1,0 +1,8 @@
+.navigation{
+    height: 10%;
+}
+.outlet{
+    height: 90%;
+    border: 2px solid black;
+    overflow: scroll;
+}
