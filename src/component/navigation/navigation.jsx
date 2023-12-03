@@ -1,7 +1,7 @@
 import {Outlet,Link} from 'react-router-dom'
 
 import { useContext } from 'react'
-import { Market_Context } from '../../context/context'
+import { Market_Context } from '../../context/auth-context'
 
 import {sign_out} from '../../utils/firebase'
 import Footer from '../footer/footer'

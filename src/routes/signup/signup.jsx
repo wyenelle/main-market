@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import { useContext } from 'react'
-import { Market_Context } from '../../context/context'
+import { Market_Context } from '../../context/auth-context'
 
 import './signup.css'
 

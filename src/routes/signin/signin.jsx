@@ -2,7 +2,7 @@ import { useState,useContext } from "react"
 
 import { sign_in_user,sign_in_with_google_popup, sign_in_with_google_redirect, create_user_from_auth } from "../../utils/firebase"
 
-import { Market_Context } from "../../context/context"
+import { Market_Context } from "../../context/auth-context"
 
 import GoogleButton from 'react-google-button'
 

@@ -5,13 +5,16 @@ import './index.css'
 
 import { BrowserRouter } from 'react-router-dom'
 
-import { Market_Context_Provider } from './context/context.jsx'
+import { Market_Context_Provider } from './context/auth-context.jsx'
+import { Product_Context_Provider } from './context/product-context.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Market_Context_Provider>
-        <App />
+        <Product_Context_Provider>
+          <App />
+        </Product_Context_Provider>
       </Market_Context_Provider>
     </BrowserRouter>
   </React.StrictMode>,
