@@ -1,13 +1,24 @@
 import CartItem from '../../component/cart-item/cart-item'
+import { useContext } from 'react'
 
+import {Cart_Context} from '../../context/cart-context'
+import './cart.css'
+import SubTotal from '../../component/subtotal/subtotal'
 
 const Cart = () => {
+    const {cartItems} = useContext(Cart_Context)
+    console.log(cartItems);
     return (
-        <section>
-            <h1>Cart Page</h1>
+        <section className='px-3 cart'>
+           <SubTotal />
+
+            <div className='cart-items-container overflow-scroll border-4 border-red-500'>
+
             {
-                [].map(items => <CartItem cartItem={item} />)
+                cartItems.map(item => <CartItem key={item.id} cartItem={item} />)
             }
+            </div>
+
         </section>
     )
 }

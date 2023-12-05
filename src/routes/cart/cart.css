@@ -1,0 +1,10 @@
+.cart{
+    height: 100vh;
+}
+
+.cart-items-container{
+    /* height: 75%; */
+}
+.subtotal{
+    height: 20vh;
+}
