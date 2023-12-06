@@ -1,6 +1,6 @@
 const SubTotal = () => {
   return (
-      <div className="    w-full  border-4 bg-black  border-green-500  ">
+      <div className="    w-full  bo-4 bg-black    ">
         <h1 className="">Subtotal: </h1>
         <p className="text-green-500">
           {" "}

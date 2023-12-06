@@ -4,7 +4,7 @@
 }
 .outlet{
     height: 90%;
-    /* border: 2px solid black; */
+    border: 2px solid black;
     overflow: scroll;
     scrollbar-width: none; 
 }
