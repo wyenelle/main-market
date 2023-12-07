@@ -7,7 +7,7 @@ import SubTotal from "../../component/subtotal/subtotal";
 
 const Cart = () => {
   const { cartItems } = useContext(Cart_Context);
-  console.log(cartItems);
+  // console.log(cartItems);
   return (
     <section className="px-3 cart">
       <SubTotal />

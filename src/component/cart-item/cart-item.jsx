@@ -9,27 +9,35 @@ import { useContext } from "react";
 import { Cart_Context } from "../../context/cart-context";
 
 const CartItem = ({ cartItem }) => {
-  const [item_properties, set_item_properties] = useState({
-    quantity: 1,
-    quantityMultipliedByPrice: ''
-  });
-
-  const { deleteItemsFromCart } = useContext(Cart_Context);
-
   const { name, imageUrl, price, id } = cartItem;
 
+  const [item_properties, set_item_properties] = useState({
+    quantity: 1,
+    quantityMultipliedByPrice: price
+  });
+
+  const { deleteItemsFromCart,get_total_price } = useContext(Cart_Context);
+
+  get_total_price(id,item_properties.quantityMultipliedByPrice)
+  
+
   const increment_quantity = () => {
-    set_item_properties({...item_properties, quantity: item_properties.quantity + 1});
+    const new_quantity = item_properties.quantity + 1
+    const new_price = new_quantity * price
+    set_item_properties(prev =>( {...prev, quantity: new_quantity, quantityMultipliedByPrice: new_price }));
   };
 
   const decrement_quantity = () => {
     if(item_properties.quantity === 1){
-        set_item_properties({...item_properties, quantity : 1})
+        return
     } else{
-        set_item_properties({...item_properties, quantity: item_properties.quantity - 1});
+        const new_quantity = item_properties.quantity - 1
+        const new_price = new_quantity * price
+        set_item_properties(prev => ({...prev, quantity: new_quantity, quantityMultipliedByPrice: new_price}));
     }
   };
 
+// console.log(item_properties.quantityMultipliedByPrice)
   return (
     <section className=" my-3 h-52  shadow-lg">
       <div className="h-full   flex items-center gap-4">
