@@ -5,10 +5,11 @@ import { Cart_Context } from "../../context/cart-context";
 import "./cart.css";
 import SubTotal from "../../component/subtotal/subtotal";
 import Button from "../../component/button/button";
+import { calculate_total_cart_items } from "../../helper";
 
 const Cart = () => {
   const { cartItems,totalCartObject } = useContext(Cart_Context);
-  const total = Object.values(totalCartObject).reduce((acc,val) => acc + val ,0)
+  const total = calculate_total_cart_items(totalCartObject)
 
   return (
     <section className="px-3 cart relative">

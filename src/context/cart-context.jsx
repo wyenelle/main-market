@@ -29,7 +29,7 @@ export const Cart_Context_Provider = ({ children }) => {
   const get_total_price = (id, new_price) => {
     setTotalCartObject(prev => ({...prev, [id]: new_price}))
   }   
-
+  
   // console.log(totalCartObject)
 
   const value = { cartItems, addItemToCart, deleteItemsFromCart,totalCartObject,get_total_price};

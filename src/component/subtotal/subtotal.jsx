@@ -1,10 +1,11 @@
 import {useContext} from 'react'
 
 import {Cart_Context} from '../../context/cart-context'
+import { calculate_total_cart_items } from '../../helper';
 
 const SubTotal = () => {
   const {totalCartObject,cartItems} = useContext(Cart_Context)
-  const total = Object.values(totalCartObject).reduce((acc,val) => acc + val, 0)
+  const total = calculate_total_cart_items(totalCartObject)
   const number_if_items = cartItems.length
   return (
       <div className="w-full">
