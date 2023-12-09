@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { IoIosAdd } from "react-icons/io";
 import { FiMinus } from "react-icons/fi";
@@ -18,7 +18,6 @@ const CartItem = ({ cartItem }) => {
 
   const { deleteItemsFromCart,get_total_price } = useContext(Cart_Context);
 
-  get_total_price(id,item_properties.quantityMultipliedByPrice)
   
 
   const increment_quantity = () => {
@@ -37,6 +36,13 @@ const CartItem = ({ cartItem }) => {
     }
   };
 
+  
+  useEffect(() => {
+    get_total_price(id,item_properties.quantityMultipliedByPrice)
+    //   second
+    // }
+  }, [item_properties.quantity])
+  
 // console.log(item_properties.quantityMultipliedByPrice)
   return (
     <section className=" my-3 h-52  shadow-lg">
