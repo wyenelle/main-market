@@ -45,7 +45,7 @@ const CartItem = ({ cartItem }) => {
   
 // console.log(item_properties.quantityMultipliedByPrice)
   return (
-    <section className=" my-3 h-36 border-4 border-red-600  shadow-lg">
+    <section className=" my-3 h-36   shadow-lg">
       <div className="h-full   flex items-center gap-4">
         <div className="h-5/6  w-2/5">
           <img

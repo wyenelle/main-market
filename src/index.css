@@ -12,8 +12,8 @@
     .btn{
         @apply bg-black text-white w-full h-16 font-bold text-xl
     }
-    .h3{
-        /* @apply   */
+    .h1{
+        @apply  font-bold text-xl
     }
 }
 *{

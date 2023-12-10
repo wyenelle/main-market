@@ -21,7 +21,7 @@ const Cart = () => {
         ))}
       </div>
       <div className="flex justify-center items-center absolute bottom-3 right-0 left-0 h-10  ">
-          <Button total={total}/>
+          <Button text={total}/>
       </div>
     </section>
   );
