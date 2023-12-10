@@ -19,7 +19,7 @@ const Navigation = () => {
     }
 
   return (
-    <main className='h-screen border-4 border-red-500 flex flex-col  '>
+    <main className='h-screen border-4 border-red-500 flex flex-col justify-between '>
         <nav className=' navigation  p-3 flex justify-between items-center'>
             <h2>  MarketPlace</h2>
             {
