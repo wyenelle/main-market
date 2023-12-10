@@ -13,6 +13,7 @@ import Profile from './routes/profile/profile'
 function App() {
 
   return (
+    <div className='h-full'>
     <Routes>
       <Route path='/' element={<Navigation />}>
         <Route index  element={<Shop />} />
@@ -24,6 +25,7 @@ function App() {
         <Route path='profile'  element={<Profile />} />
       </Route>
     </Routes>
+    </div>
   )
 }
 
