@@ -2,7 +2,7 @@
     height: 100vh;
     display: grid;
     grid-template-rows: 10% 70% 10% ;
-    align-items: stretch;
+    align-content: center;
 }
 .navigation{
     /* height: 10%; */
