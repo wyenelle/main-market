@@ -11,7 +11,8 @@ import './navigation.css'
 
 const Navigation = () => {
     const {loggedInUser,setLoggedInUser} = useContext(Market_Context)
-
+    const ciewport = window.innerHeight
+    console.log(ciewport);
 
     const sign_out_handler = async () => {
         await sign_out()
@@ -19,7 +20,7 @@ const Navigation = () => {
     }
 
   return (
-    <main className='nav-container '>
+    <main className='nav-container ' style={{height: `${ciewport}px`}}>
         <nav className=' navigation  p-3 flex justify-between items-center'>
             <h2>  MarketPlace</h2>
             {
