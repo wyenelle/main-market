@@ -28,9 +28,9 @@ const Navigation = () => {
 
 
         </nav>
-        <section className='outlet'>
+        {/* <section className='outlet'>
             <Outlet />
-        </section>
+        </section> */}
 
         <Footer  />
     </main>
