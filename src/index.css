@@ -24,6 +24,7 @@
 }
 html{
     /* height: 100vh; */
+    border: 2px solid blue;
 }
 body{
     height: 100%;
