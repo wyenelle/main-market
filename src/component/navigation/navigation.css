@@ -1,9 +1,14 @@
+.nav-container{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 10% 80% 10% ;
+}
 .navigation{
-    height: 10%;
+    /* height: 10%; */
     /* border: 4px solid black; */
 }
 .outlet{
-    height: 70%;
+    /* height: 70%; */
     /* border: 2px solid black; */
     overflow: scroll;
     scrollbar-width: none; 
