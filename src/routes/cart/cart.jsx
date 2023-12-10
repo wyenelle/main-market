@@ -20,7 +20,7 @@ const Cart = () => {
           <CartItem key={item.id} cartItem={item} />
         ))}
       </div>
-      <div className="flex justify-center absolute bottom-0 right-0 left-0 h-13  ">
+      <div className="flex justify-center items-center absolute bottom-3 right-0 left-0 h-10  ">
           <Button total={total}/>
       </div>
     </section>

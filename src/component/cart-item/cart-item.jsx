@@ -45,7 +45,7 @@ const CartItem = ({ cartItem }) => {
   
 // console.log(item_properties.quantityMultipliedByPrice)
   return (
-    <section className=" my-3 h-52  shadow-lg">
+    <section className=" my-3 h-36 border-4 border-red-600  shadow-lg">
       <div className="h-full   flex items-center gap-4">
         <div className="h-5/6  w-2/5">
           <img
@@ -57,26 +57,26 @@ const CartItem = ({ cartItem }) => {
         <div className="w-3/5 h-5/6  py-3 flex flex-col justify-around">
           <div className="flex ">
             <div className="w-4/5">
-              <h4>{name}</h4>
+              <h4 className="font-semibold">{name}</h4>
               <p className="text-green-500">Free Delivery</p>
-              <p className="font-bold text-xl">{price}</p>
+              <p className="font-medium text-xl">{price}</p>
             </div>
             <div className="w-1/5 flex justify-center ">
               <MdDeleteOutline
-                size={40}
+                size={30}
                 onClick={() => deleteItemsFromCart(id)}
               />
             </div>
           </div>
           <div className="flex w-4/6 justify-between items-center ">
             <FiMinus
-              size={40}
+              size={30}
               className="border-4 rounded-full"
               onClick={decrement_quantity}
             />
             <p className="font-bold">{item_properties.quantity}</p>
             <IoIosAdd
-              size={40}
+              size={30}
               className="rounded-full border-4"
               onClick={increment_quantity}
             />

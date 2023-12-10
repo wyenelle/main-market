@@ -9,7 +9,7 @@ const SubTotal = () => {
   const number_if_items = cartItems.length
   return (
       <div className="w-full">
-        <h1 className=" text-2xl font-bold">Subtotal: {total} </h1>
+        <h1 className=" text-xl">Subtotal: {total} </h1>
         <p className="text-green-500 mt-2">
           {" "}
           {`You have ${number_if_items ||'no'} ${number_if_items > 1 ? 'items' : 'item' } in your cart`}

@@ -9,7 +9,7 @@ import {Link} from 'react-router-dom'
 
 const Footer = () => {
   return (
-    <footer className="h-20  flex justify-around items-center">
+    <footer className="footer  flex justify-around items-center">
         <Link to='/' title='home'>
             <RiHome2Line size={25}/>  
         </Link>
