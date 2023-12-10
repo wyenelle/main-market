@@ -29,11 +29,12 @@ const Navigation = () => {
 
 
         </nav>
-        {/* <section className='outlet'>
+        <section className='outlet'>
             <Outlet />
-        </section> */}
-
-        <Footer  />
+        </section>
+            <div className='cart-footer'>
+                <Footer  />
+            </div>
     </main>
     )
 }
