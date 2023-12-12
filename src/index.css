@@ -15,6 +15,9 @@
     .h1{
         @apply  font-bold text-xl
     }
+    .btn{
+        @apply bg-black rounded-lg font-light text-sm h-10
+    }
 }
 *{
     padding: 0;
