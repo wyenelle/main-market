@@ -109,7 +109,7 @@ const ProductsContainer = () => {
       <div className="grid grid-cols-2  p-1 gap-3">
         {filtered_array.map((product) => (
           <div key={product.id} className=" h-66  relative">
-            <img src={product.imageUrl} className="rounded-xl h-3/5 w-full" />
+            <img src={product.imageUrl} className="rounded-xl h-3/5 object-cover w-full" />
             <div className="grid  grid-cols-3  h-1/3">
               <h3 className="col-span-2 text-ellipsis flex items-center">
                 {product.name}

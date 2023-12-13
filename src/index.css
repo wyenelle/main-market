@@ -36,7 +36,8 @@ body{
 #root{
     height: 100%;
 }
-h1{
+h1,.banner-span{
+    font-family: 'kanit',sans-serif;
 }
 
 h2{

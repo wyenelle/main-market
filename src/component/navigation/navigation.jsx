@@ -19,8 +19,8 @@ const Navigation = () => {
     }
 
   return (
-    <main className='nav-container ' style={{height: `${ciewport}px`}}>
-        <nav className=' navigation bg-black text-white  p-3 flex justify-between items-center'>
+    <main className='nav-container' style={{height: `${ciewport}px`}}>
+        <nav className=' navigation py-3 px-4 flex justify-between items-center'>
             <h2>  MarketPlace</h2>
             {
                 loggedInUser ? <span onClick={sign_out_handler}> sign out </span> : <Link to='/signin'> sign in</Link>

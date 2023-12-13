@@ -32,7 +32,7 @@ const Featured_Category = () => {
             <img
               src={product.imageUrl}
               alt="some image"
-              className="w-full rounded-xl h-full"
+              className="w-full rounded-xl object-cover  h-full"
             />
           </SwiperSlide>
         ))}
