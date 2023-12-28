@@ -3,7 +3,7 @@ import './shop.css'
 import Banner from '../../component/banner/banner'
 import Featured_Category from '../../component/featured-category/featured-category'
 import ProductsContainer from '../../component/products-container/products-container'
-import Mens_Category from '../../component/mens-category/mens-category'
+// import Mens_Category from '../../component/mens-category/mens-category'
 
 const Shop = () => {
   return (
@@ -11,7 +11,7 @@ const Shop = () => {
             <Banner />
             <Featured_Category />
             <ProductsContainer/>
-            <Mens_Category />
+            {/* <Mens_Category /> */}
     </main>
   )
 }

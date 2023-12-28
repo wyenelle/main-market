@@ -7,9 +7,10 @@ import SignIn from './routes/signin/signin'
 import SignUp from './routes/signup/signup'
 import Cart from './routes/cart/cart'
 import WishList from './routes/wishlist/wishlist'
-import Message from '../message/message'
+import Message from './routes/message/message'
 import Profile from './routes/profile/profile'
 
+// import {Shop,SignIn,SignUp,Cart,WishList,Message,Profile} from './routes'
 function App() {
 
   return (
