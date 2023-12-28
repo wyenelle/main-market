@@ -6,11 +6,15 @@ import "./cart.css";
 import SubTotal from "../../component/subtotal/subtotal";
 import Button from "../../component/button/button";
 import { calculate_total_cart_items } from "../../helper";
+import CartHeader from "../../component/cart-header/cart-header";
 
 const Cart = () => {
   const { cartItems,totalCartObject } = useContext(Cart_Context);
   const total = calculate_total_cart_items(totalCartObject)
 
+  if(cartItems.length < 1){
+    return <CartHeader />
+  } else if(cartItems.length >= 1)
   return (
     <section className="px-3 cart relative">
       <SubTotal />
